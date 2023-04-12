@@ -1,4 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 html {
+    font-size: 16px;
 
 /* color palette */
     --color1: #FF9F1C;
@@ -6,28 +31,102 @@ html {
     --color3: #FFFFFF;
     --color4: #CBF3F0;
     --color5: #2EC4B6;
+
+/* Font */
+    --Roboto: 'Roboto', Arial, Helvetica, sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: grid;
-    grid: 1fr 5fr / 1fr 4fr;   
+    grid: 1fr 5fr / 1fr 4fr; 
+    font-family: var(--Roboto);
 }
-
-
 
 header {
     grid-area: 1 / 2 / 2 / 3;
-    background-color: var(--color5);
+    background-color: var(--color3);
+    display: grid;
+    grid: 1fr 1fr / auto;
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: .5rem 3rem 1rem 2rem;
+    gap: 1rem;
 }
+
+header div {
+    display: grid;
+}
+
+header svg {
+    fill: var(--color1);
+    width: 1.8rem;
+}
+
+header div:first-child {
+    grid: auto / min-content 1fr repeat(2, min-content) auto;
+    place-items: center;
+}
+
+input {
+    border-radius: 15px;
+    border: none;
+    background-color: var(--color4);
+    line-height: 1.8rem;
+    justify-self: start;
+    width: 85%;
+    margin: 0 0 0 1rem;
+}
+
+header .user-img {
+    width: 3rem;
+    margin: 0 2rem;
+}
+
+header div:last-child {
+    grid: 1fr / auto 1fr auto;
+}
+
+header div:last-child img {
+    width: 4.5rem;
+    align-self: center;
+    margin: 0 1rem 0 0;
+}
+
+header div:last-child p:first-child{
+    align-self: self-end;
+    font-size: .9rem;
+    margin: .3rem 0;
+}
+
+button {
+    background-color: var(--color5);
+    border-radius: 25px;
+    border: none;
+    align-self: center;
+    padding: .8rem;
+    font-weight: bold;
+    color: var(--color3);
+    width: 6rem;
+    margin: 0 0 0 1.5rem;
+    justify-self: end;
+    font-size: 1rem;
+}
+ button:hover{
+    background-color: var(--color1);
+ }
+ button:active {
+    background-color: var(--color2);
+ }
 
 aside {
     grid-area: 1 / 1 / 3 / 2;
-    background-color: var(--color1);
+    background-color: var(--color5);
 }
 
 main {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: var(--color3);
+    background-color: var(--color4);
 }
