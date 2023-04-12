@@ -1,0 +1,33 @@
+html {
+
+/* color palette */
+    --color1: #FF9F1C;
+    --color2: #FFBF69;
+    --color3: #FFFFFF;
+    --color4: #CBF3F0;
+    --color5: #2EC4B6;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    grid: 1fr 5fr / 1fr 4fr;   
+}
+
+
+
+header {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--color5);
+}
+
+aside {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--color1);
+}
+
+main {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: var(--color3);
+}
