@@ -114,9 +114,11 @@ button {
     justify-self: end;
     font-size: 1rem;
 }
+
  button:hover{
     background-color: var(--color1);
  }
+
  button:active {
     background-color: var(--color2);
  }
@@ -124,6 +126,47 @@ button {
 aside {
     grid-area: 1 / 1 / 3 / 2;
     background-color: var(--color5);
+    display: grid;
+    grid: repeat(10, min-content) / min-content auto;
+    padding: 2rem 1.2rem;
+    color: var(--color3);
+    font-weight: bold;
+    gap: 1.2rem;
+}
+
+aside svg {
+    width: 1.7rem;
+    fill: var(--color3);
+    align-self: center;
+    justify-self:  center;
+}
+
+aside a {
+    align-self: center;
+    font-size: 1.2rem;
+    color: var(--color3);
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: var(--color2);
+}
+
+aside :first-child {
+    align-self: center;
+    width: 3rem;
+    margin-bottom: 2rem;
+}
+
+aside :nth-child(2){
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+aside :nth-child(13),
+:nth-child(14){
+    margin-bottom: 3rem;
 }
 
 main {
