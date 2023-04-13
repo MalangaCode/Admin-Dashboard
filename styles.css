@@ -26,11 +26,11 @@ html {
     font-size: 16px;
 
 /* color palette */
-    --color1: #FF9F1C;
-    --color2: #FFBF69;
+    --color1: #FCA311;
+    --color2: #E5E5E5;
     --color3: #FFFFFF;
-    --color4: #CBF3F0;
-    --color5: #2EC4B6;
+    --color4: #000000;
+    --color5: #14213D;
 
 /* Font */
     --Roboto: 'Roboto', Arial, Helvetica, sans-serif;
@@ -73,7 +73,7 @@ header div:first-child {
 input {
     border-radius: 15px;
     border: none;
-    background-color: var(--color4);
+    background-color: var(--color2);
     line-height: 1.8rem;
     justify-self: start;
     width: 85%;
@@ -149,7 +149,7 @@ aside a {
 }
 
 aside a:hover {
-    color: var(--color2);
+    color: var(--color1);
 }
 
 aside :first-child {
@@ -171,5 +171,119 @@ aside :nth-child(13),
 
 main {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: var(--color4);
+    background-color: var(--color2);
+    padding: 2rem 2rem 2rem 1rem;
+    display: grid;
+    grid: auto / 3fr 1fr;
+    gap: 1rem;
+}
+
+.main-left-section {
+    display: grid;
+    grid: min-content auto / repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+.main-left-section > p {
+    grid-area: 1 / 1 / 2 / -1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color5);
+}
+
+.card {
+    background-color: var(--color3);
+    border-radius: 10px;
+    border-left: solid .5rem var(--color4);
+    padding: 2rem 2rem;
+    display: grid;
+    grid: min-content 1fr min-content/ auto;
+}
+
+.card :first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color1);
+}
+
+.card :nth-child(2) {
+    font-size: .9rem;
+    color: var(--color4);
+}
+
+.card div {
+    display: grid;
+    grid: min-content / repeat(3, min-content);
+    gap: 1.5rem;
+    justify-self: end;
+
+}
+
+main svg {
+    fill: var(--color1);
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.main-right-section {
+    display: grid;
+    grid: repeat(4, min-content) / auto;
+    gap: 1rem;
+}
+
+.main-right-section > p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color5);
+}
+
+.main-right-section > div {
+    background-color: var(--color3);
+    border-radius: 10px;
+    display: grid;
+}
+.announcements {
+    padding: 0 1.5rem ;
+}
+
+.announcements div {
+    padding: 1rem 0;
+}
+
+.border{
+    border-top: 1px solid var(--color2);
+    border-bottom: 1px solid var(--color2);
+}
+.announcements > div :first-child {
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main-right-section > div > div :last-child {
+    color: var(--color4);
+    font-size: .8rem;
+}
+
+.main-right-section img {
+    width: 3rem;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.trending {
+    gap: 1.5rem;
+    padding: 1.5rem 1.5rem;
+}
+
+.trending > div {
+    display: grid;
+    grid: repeat(2, min-content) / min-content auto;
+    gap: 0 1rem;
+    padding: 0;
+}
+
+.trending > div :nth-child(2) {
+    color: var(--color1);
+    align-self: end;
+
 }
